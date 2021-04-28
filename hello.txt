@@ -1,4 +1,0 @@
-<h1>Hello lalalala..</h1>
-<h2>Hello lalalala..</h2>
-
-<img src="">
