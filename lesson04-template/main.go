@@ -6,6 +6,12 @@ import (
 	"net/http"
 )
 
+type User struct {
+	Name   string
+	Age    int
+	Genter string
+}
+
 func main() {
 
 	http.HandleFunc("/hello", sayHello)
@@ -24,10 +30,15 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 		fmt.Printf("http server fail..,err%v", err)
 		return
 	}
-	name := "千羽的编程时光"
-	err = t.Execute(w, name)
+	u := User{
+		Name:   "千羽",
+		Age:    18,
+		Genter: "男",
+	}
+	//name := "千羽的编程时光"
+	// 渲染模板
+	err = t.Execute(w, u)
 	if err != nil {
 		fmt.Println("template....fail..")
 	}
-	// 渲染模板
 }
