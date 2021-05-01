@@ -35,6 +35,11 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 		Age:    18,
 		Genter: "男",
 	}
+	//u := map[string]interface{}{
+	//	Name:   "千羽",
+	//	Age:    18,
+	//	Genter: "男",
+	//}
 	//name := "千羽的编程时光"
 	// 渲染模板
 	err = t.Execute(w, u)
