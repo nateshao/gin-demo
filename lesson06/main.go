@@ -1,25 +1,23 @@
 package main
 
 import (
-	"fmt"
+	"github.com/gin-gonic/gin"
+	"html/template"
 	"net/http"
 )
 
 func main() {
-	http.HandleFunc("/hello", f1)
-	err := http.ListenAndServe("8081", nil)
-	if err != nil {
-		fmt.Printf("parse template fail,err:%v", err)
-		return
-	}
+	router := gin.Default()
+	router.SetFuncMap(template.FuncMap{
+		"safe": func(str string) template.HTML {
+			return template.HTML(str)
+		},
+	})
+	router.LoadHTMLFiles("./index.tmpl")
 
-}
+	router.GET("/index", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "index.tmpl", "<a href='https://liwenzhou.com'>李文周的博客</a>")
+	})
 
-func f1(w http.ResponseWriter, r *http.Request) {
-	// 定义模板
-
-	//解析模板
-
-	//渲染模板
-
+	router.Run(":8080")
 }
