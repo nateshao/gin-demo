@@ -11,7 +11,7 @@ import (
 type User struct {
 	gorm.Model   // 内嵌gorm.Model
 	Name         string
-	Age          sql.NullInt64 // 零值类型
+	Age          sql.NullInt64  `gorm:"column:user_age"`         // set column name to `user_age`
 	Birthday     *time.Time
 	Email        string  `gorm:"type:varchar(100);unique_index"`
 	Role         string  `gorm:"size:255"`        // 设置字段大小为255
