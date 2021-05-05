@@ -28,6 +28,10 @@ type Animal struct {
 	Age      int64
 }
 
+func (Animal) TableName() string {
+	return "nateshao"
+}
+
 func main() {
 	// 连接数据库
 	db, err := gorm.Open("mysql", "root:123456@(127.0.0.1:3306)/db1?charset=utf8mb4&parseTime=True&loc=Local")
@@ -35,7 +39,13 @@ func main() {
 		panic(err)
 	}
 	defer db.Close()
+
+	// 禁用默认表名的复数形式，如果置为 true，则 `User` 的默认表名是 `user`
+	db.SingularTable(true)
+
 	db.AutoMigrate(&User{}) // 创建表
 	db.AutoMigrate(&Animal{})
+	// 使用User结构体创建名为`qianyu`的表
+	db.Table("qianyu").CreateTable(&User{})
 
 }
