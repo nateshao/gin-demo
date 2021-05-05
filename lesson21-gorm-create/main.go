@@ -9,7 +9,7 @@ import (
 // 定义模型
 type User struct {
 	ID   int64
-	Name string
+	Name string `gorm:"default:'千羽'"` // 设置默认值
 	Age  int64
 }
 
@@ -24,4 +24,10 @@ func main() {
 	// 把模型与数据库的表对应起来
 	db.AutoMigrate(&User{})
 
+	u := User{
+		Age: 28,
+	}
+	fmt.Println(db.NewRecord(&u)) // 判断逐渐是否为空
+	db.Debug().Create(&u)
+	fmt.Println(db.NewRecord(&u))
 }
