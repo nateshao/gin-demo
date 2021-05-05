@@ -2,6 +2,8 @@ package main
 
 import (
 	"database/sql"
+	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"time"
 )
 
@@ -19,6 +21,21 @@ type User struct {
 	IgnoreMe     int     `gorm:"-"`               // 忽略本字段
 }
 
+// 使用`AnimalID`作为主键
+type Animal struct {
+	AnimalID int64 `gorm:"primary_key"`
+	Name     string
+	Age      int64
+}
+
 func main() {
+	// 连接数据库
+	db, err := gorm.Open("mysql", "root:123456@(127.0.0.1:3306)/db1?charset=utf8mb4&parseTime=True&loc=Local")
+	if err != nil {
+		panic(err)
+	}
+	defer db.Close()
+	db.AutoMigrate(&User{}) // 创建表
+	db.AutoMigrate(&Animal{})
 
 }
