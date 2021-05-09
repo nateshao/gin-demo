@@ -1,3 +1,6 @@
+*.javascript linguist-language=go
+*.css linguist-language=go
+*.html linguist-language=go
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -13,8 +16,4 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
-*.css linguist-language=
 
-*.js linguist-language=go
-*.css linguist-language=go
-*.html linguist-language=go
