@@ -13,3 +13,8 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+*.css linguist-language=
+
+*.js linguist-language=go
+*.css linguist-language=go
+*.html linguist-language=go
