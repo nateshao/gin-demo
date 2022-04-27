@@ -21,13 +21,11 @@ func hello(h http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	//r := gin.Default() // 返回默认的路有引擎
+	r := gin.Default() // 返回默认的路有引擎
 	//
-	//// 指定用户使用GET请求访问/hello时，执行sayHello这个函数
-	//r.GET("/sayHello", sayHello)
+	// 指定用户使用GET请求访问/hello时，执行sayHello这个函数
+	r.GET("/sayHello", sayHello)
 	//
-	//// 启动服务
-	//r.Run(":8080")
 
 	/************************************/
 
@@ -38,29 +36,28 @@ func main() {
 		return
 	}
 
-	//r.GET("/book", ...)
-	//r.GET("/create_book", ...)
-	//r.GET("/update_book", ...)
-	//r.GET("/shanchu_book", ...)
+	// rest ful 风格
+	r.GET("/book", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"method": "GET",
+		})
+	})
+	r.POST("/book", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"method": "POST",
+		})
+	})
+	r.PUT("/book", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"method": "PUT",
+		})
+	})
+	r.DELETE("/book", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"method": "DELETE",
+		})
+	})
 
-	//r.GET("/book", func(c *gin.Context) {
-	//	c.JSON(200, gin.H{
-	//		"method": "GET",
-	//	})
-	//})
-	//r.POST("/book", func(c *gin.Context) {
-	//	c.JSON(http.StatusOK, gin.H{
-	//		"method": "POST",
-	//	})
-	//})
-	//r.PUT("/book", func(c *gin.Context) {
-	//	c.JSON(http.StatusOK, gin.H{
-	//		"method": "PUT",
-	//	})
-	//})
-	//r.DELETE("/book", func(c *gin.Context) {
-	//	c.JSON(http.StatusOK, gin.H{
-	//		"method": "DELETE",
-	//	})
-	//})
+	// 启动服务
+	r.Run(":8080")
 }
