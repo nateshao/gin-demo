@@ -38,5 +38,4 @@ func main() {
 	db.Model(&u).Update("hobby", "双色球")
 	// 删除
 	db.Delete(&u)
-
 }

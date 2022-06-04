@@ -51,14 +51,14 @@ func main() {
 
 	//db.First(&user)
 	//// 6. 更新
-	//user.Name = "七米"
+	//user.Name = "千羽"
 	//user.Age = 99
 	//db.Debug().Save(&user)  // 默认会修改所有字段
 	//
 	////db.Debug().Model(&user).Update("name", "小王子")
 	////
 	////m1 := map[string]interface{}{
-	////	"name": "liwenzhou",
+	////	"name": "nateshao",
 	////	"age": 28,
 	////	"active": true,
 	////}
