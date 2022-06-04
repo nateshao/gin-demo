@@ -14,24 +14,23 @@ import (
 func Register(ctx *gin.Context) {
 	db := common.GetDB()
 	//获取参数
-	name := ctx.PostForm("name")
-	telephone := ctx.PostForm("telephone")
+	username := ctx.PostForm("username")
 	password := ctx.PostForm("password")
 	//数据验证
 
-	if len(telephone) != 11 {
-		response.Response(ctx, http.StatusUnprocessableEntity, 442, nil, "手机号必须11位")
+	if len(username) == 0 || username == "" {
+		response.Response(ctx, http.StatusUnprocessableEntity, 442, nil, "用户名不能为空")
 		return
 	}
-	if len(password) < 8 {
+	if len(password) < 8 || password == "" {
 		response.Response(ctx, http.StatusUnprocessableEntity, 442, nil, "密码必须大于8位")
 		return
 	}
-	log.Println(name, telephone, password)
+	log.Println(username, password)
 
 	//判断手机号是否存在
-	if isTelephoneExist(db, telephone) {
-		response.Response(ctx, http.StatusUnprocessableEntity, 442, nil, "手机号已注册")
+	if isUsernameExist(db, username) {
+		response.Response(ctx, http.StatusUnprocessableEntity, 442, nil, "该用户已注册")
 		return
 	}
 
@@ -42,34 +41,31 @@ func Register(ctx *gin.Context) {
 		return
 	}
 	newUser := model.User{
-		Name:      name,
-		Telephone: telephone,
-		Password:  string(hashdPassword),
+		Username: username,
+		Password: string(hashdPassword),
 	}
 	if err := db.Create(&newUser).Error; err != nil {
 		response.Response(ctx, http.StatusUnprocessableEntity, 442, nil, err.Error())
 		return
 	}
-
 	response.Success(ctx, nil, "注册成功")
-
 }
 
-func isTelephoneExist(db *gorm.DB, telephone string) bool {
+func isUsernameExist(db *gorm.DB, username string) bool {
 	var user model.User
-	db.Where("telephone=?", telephone).First(&user)
+	db.Where("username=?", username).First(&user)
 	return user.ID != 0
 }
 
 func Login(ctx *gin.Context) {
 	db := common.GetDB()
 	//获取参数
-	telephone := ctx.PostForm("telephone")
+	username := ctx.PostForm("username")
 	password := ctx.PostForm("password")
 
 	//数据校验
-	if len(telephone) != 11 {
-		response.Response(ctx, http.StatusUnprocessableEntity, 442, nil, "手机号必须11位")
+	if len(username) == 0 || username == "" {
+		response.Response(ctx, http.StatusUnprocessableEntity, 442, nil, "用户名不能为空")
 		return
 	}
 	if len(password) < 8 {
@@ -79,9 +75,9 @@ func Login(ctx *gin.Context) {
 
 	//判断手机号是否存在
 	var user model.User
-	db.Where("telephone=?", telephone).First(&user)
+	db.Where("username=?", username).First(&user)
 	if user.ID == 0 {
-		response.Response(ctx, http.StatusUnprocessableEntity, 442, nil, "手机号不存在")
+		response.Response(ctx, http.StatusUnprocessableEntity, 442, nil, "用户不存在，请重新输入")
 		return
 	}
 

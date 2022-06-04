@@ -3,13 +3,13 @@ package dto
 import "gin-gorm-token-demo/model"
 
 type UserDto struct {
-	Name      string `json:"name"`
-	Telephone string `json:"telephone"`
+	Username string `json:"username"`
+	Password string `json:"password"`
 }
 
 func ToUserDto(user *model.User) UserDto {
 	return UserDto{
-		Name:      user.Name,
-		Telephone: user.Telephone,
+		Username: user.Username,
+		Password: user.Password,
 	}
 }
