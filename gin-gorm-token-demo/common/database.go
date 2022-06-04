@@ -5,6 +5,7 @@ import (
 	"gin-gorm-token-demo/model"
 	"gin-gorm-token-demo/util"
 	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"github.com/spf13/viper"
 )
 
