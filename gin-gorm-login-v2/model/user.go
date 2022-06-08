@@ -6,5 +6,5 @@ type User struct {
 	gorm.Model
 	UserName string `gorm:"varchar(20);not null"`
 	//Telephone string `gorm:"varchar(20);not null;unique"`
-	Password string `gorm:"size:255;not null"`
+	PassWord string `gorm:"size:255;not null"`
 }

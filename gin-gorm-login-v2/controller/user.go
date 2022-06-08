@@ -46,7 +46,7 @@ func Register(ctx *gin.Context) {
 
 	//判断手机号是否存在
 	var user model.User
-	db.Where("username = ?", username).First(&user)
+	db.Where("user_name = ?", username).First(&user)
 	if user.ID != 0 {
 		ctx.JSON(http.StatusUnprocessableEntity, gin.H{
 			"code":    422,
@@ -66,7 +66,7 @@ func Register(ctx *gin.Context) {
 	}
 	newUser := model.User{
 		UserName: username,
-		Password: string(hasedPassword),
+		PassWord: string(hasedPassword),
 	}
 	db.Create(&newUser)
 
@@ -80,7 +80,6 @@ func Register(ctx *gin.Context) {
 func Login(ctx *gin.Context) {
 
 	db := common.GetDB()
-
 	//获取参数
 	//此处使用Bind()函数，可以处理不同格式的前端数据
 	var requestUser model.User
@@ -106,9 +105,9 @@ func Login(ctx *gin.Context) {
 		return
 	}
 
-	//判断手机号是否存在
+	//判断用户是否存在
 	var user model.User
-	db.Where("username = ?", username).First(&user)
+	db.Where("user_name = ?", username).First(&user)
 	if user.ID == 0 {
 		ctx.JSON(http.StatusUnprocessableEntity, gin.H{
 			"code":    422,
@@ -118,7 +117,7 @@ func Login(ctx *gin.Context) {
 	}
 
 	//判断密码是否正确
-	if err := bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(password)); err != nil {
+	if err := bcrypt.CompareHashAndPassword([]byte(user.PassWord), []byte(password)); err != nil {
 		ctx.JSON(http.StatusUnprocessableEntity, gin.H{
 			"code":    422,
 			"message": "密码错误",

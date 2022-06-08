@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="454c20b4-309c-45d2-ae4a-ba3823187d10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/gin-gorm-login-v2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/database.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/user.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/user.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gin-gorm-login/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../gin-gorm-login/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gin-gorm-login/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../gin-gorm-login/go.sum" afterDir="false" />
+    <list default="true" id="454c20b4-309c-45d2-ae4a-ba3823187d10" name="Changes" comment="v2版本">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/user.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +85,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="v2版本" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2版本" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
