@@ -15,8 +15,6 @@ func Register(ctx *gin.Context) {
 	//此处使用Bind()函数，可以处理不同格式的前端数据
 	var requestUser model.User
 	ctx.Bind(&requestUser)
-	//username := requestUser.UserName
-	//password := requestUser.Password
 
 	username := ctx.PostForm("username")
 	password := ctx.PostForm("password")
@@ -29,13 +27,6 @@ func Register(ctx *gin.Context) {
 		})
 		return
 	}
-	//if len(telephone) != 11 {
-	//	ctx.JSON(http.StatusUnprocessableEntity, gin.H{
-	//		"code":    422,
-	//		"message": "手机号必须为11位",
-	//	})
-	//	return
-	//}
 	if len(password) < 6 {
 		ctx.JSON(http.StatusUnprocessableEntity, gin.H{
 			"code":    422,
@@ -44,7 +35,7 @@ func Register(ctx *gin.Context) {
 		return
 	}
 
-	//判断手机号是否存在
+	//判断用户是否存在
 	var user model.User
 	db.Where("user_name = ?", username).First(&user)
 	if user.ID != 0 {
@@ -84,8 +75,6 @@ func Login(ctx *gin.Context) {
 	//此处使用Bind()函数，可以处理不同格式的前端数据
 	var requestUser model.User
 	ctx.Bind(&requestUser)
-	//username := requestUser.UserName
-	//password := requestUser.Password
 
 	username := ctx.PostForm("username")
 	password := ctx.PostForm("password")
