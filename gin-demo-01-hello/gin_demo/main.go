@@ -30,7 +30,7 @@ func main() {
 	/************************************/
 
 	http.HandleFunc("/hello", hello)
-	err := http.ListenAndServe(":9000", nil)
+	err := http.ListenAndServe(":8080", nil)
 	if err != nil {
 		fmt.Printf("http server failed ,err :%v\n", err)
 		return
@@ -59,5 +59,5 @@ func main() {
 	})
 
 	// 启动服务
-	r.Run(":8080")
+	//r.Run(":8080")
 }
