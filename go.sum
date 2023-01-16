@@ -1,3 +1,5 @@
+github.com/ActiveState/log v0.0.0-20131113052249-496a9e344fbc h1:dKxVSKNTxaclAW44QdctGOmlyjArmwN5CA6dnJMeLGI=
+github.com/ActiveState/log v0.0.0-20131113052249-496a9e344fbc/go.mod h1:b2Qs4BfjICNGZReLr/W7OKIP85FWwgzKEu1nFx7pzh0=
 github.com/bytedance/go-tagexpr/v2 v2.9.2 h1:QySJaAIQgOEDQBLS3x9BxOWrnhqu5sQ+f6HaZIxD39I=
 github.com/bytedance/go-tagexpr/v2 v2.9.2/go.mod h1:5qsx05dYOiUXOUgnQ7w3Oz8BYs2qtM/bJokdLb79wRM=
 github.com/bytedance/gopkg v0.0.0-20220413063733-65bf48ffb3a7 h1:PtwsQyQJGxf8iaPptPNaduEIu9BnrNms+pcRdHAxZaM=
