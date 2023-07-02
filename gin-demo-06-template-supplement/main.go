@@ -11,7 +11,7 @@ func index(w http.ResponseWriter, r *http.Request) {
 	// 解析模板
 	t, err := template.New("index.tmpl").
 		Delims("{[", "]}").
-		ParseFiles("./index.tmpl")
+		ParseFiles("./gin-demo-06-template-supplement/index.tmpl")
 	if err != nil {
 		fmt.Printf("parse template failed,err:%v\n", err)
 		return
@@ -33,7 +33,7 @@ func xss(w http.ResponseWriter, r *http.Request) {
 		"safe": func(str string) template.HTML {
 			return template.HTML(str)
 		},
-	}).ParseFiles("./xss.tmpl")
+	}).ParseFiles("./gin-demo-06-template-supplement/xss.tmpl")
 	if err != nil {
 		fmt.Printf("parse template failed,err:%v\n", err)
 		return
