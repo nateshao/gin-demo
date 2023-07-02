@@ -15,7 +15,7 @@ type User struct {
 func sayHello(w http.ResponseWriter, r *http.Request) {
 	// 定义模板
 	// 解析模板
-	t, err := template.ParseFiles("./hello.tmpl")
+	t, err := template.ParseFiles("./gin-demo-03-template-grammar/hello.tmpl")
 	if err != nil {
 		fmt.Println("parse template failed,err:%v", err)
 		return
@@ -44,7 +44,7 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/", sayHello)
+	http.HandleFunc("/sayHello", sayHello)
 	err := http.ListenAndServe(":9000", nil)
 	if err != nil {
 		fmt.Println("HTTP server start failed, err:%v", err)

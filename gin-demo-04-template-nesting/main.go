@@ -19,7 +19,7 @@ func f1(w http.ResponseWriter, r *http.Request) {
 		"kua99": k,
 	})
 	// 解析模板
-	_, err := t.ParseFiles("./f.tmpl")
+	_, err := t.ParseFiles("./gin-demo-04-template-nesting/f.tmpl")
 	if err != nil {
 		fmt.Printf("parse template failed, err:%v\n", err)
 		return
@@ -33,7 +33,7 @@ func f1(w http.ResponseWriter, r *http.Request) {
 func demo1(w http.ResponseWriter, r *http.Request) {
 	// 定义模板
 	// 解析模板
-	t, err := template.ParseFiles("./t.tmpl", "./ul.tmpl")
+	t, err := template.ParseFiles("./gin-demo-04-template-nesting/t.tmpl", "./gin-demo-04-template-nesting/ul.tmpl")
 	if err != nil {
 		fmt.Printf("parse template failed, err:%v\n", err)
 		return
