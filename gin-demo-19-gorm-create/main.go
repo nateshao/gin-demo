@@ -27,8 +27,8 @@ func main() {
 	db.AutoMigrate(&User{})
 
 	// 3. 创建
-	u := User{Name: sql.NullString{String: "", Valid: true}, Age: 98} // 在代码层面创建一个User对象
-	fmt.Println(db.NewRecord(&u))                                     // 判断主键是否为空 true
-	db.Debug().Create(&u)                                             // 在数据库中创建了一条q1mi 18的记录
-	fmt.Println(db.NewRecord(&u))                                     // 判断主键是否为空 false
+	u := User{Name: sql.NullString{String: "公众号：程序员千羽", Valid: true}, Age: 98} // 在代码层面创建一个User对象
+	fmt.Println(db.NewRecord(&u))                                              // 判断主键是否为空 true
+	db.Debug().Create(&u)                                                      // 在数据库中创建了一条q1mi 18的记录
+	fmt.Println(db.NewRecord(&u))                                              // 判断主键是否为空 false
 }
