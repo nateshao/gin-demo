@@ -12,11 +12,11 @@ func main() {
 	r.GET("/json", func(c *gin.Context) {
 		// 方法1：使用map
 		//data := map[string]interface{}{
-		//	"name": "小王子",
+		//	"name": "公众号：程序员千羽",
 		//	"message":"hello world!",
 		//	"age": 18,
 		//}
-		data := gin.H{"name": "小王子", "message": "hello world!", "age": 18}
+		data := gin.H{"name": "公众号：程序员千羽", "message": "hello world!", "age": 18}
 		c.JSON(http.StatusOK, data)
 	})
 
@@ -28,7 +28,7 @@ func main() {
 	}
 	r.GET("/another_json", func(c *gin.Context) {
 		data := msg{
-			"小王子",
+			"公众号：程序员千羽",
 			"Hello golang!",
 			18,
 		}

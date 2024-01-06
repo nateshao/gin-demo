@@ -17,7 +17,7 @@ type User struct {
 
 func main() {
 	// 2.连接MySQL数据库
-	db, err := gorm.Open("mysql", "root:root1234@(127.0.0.1:13306)/db1?charset=utf8mb4&parseTime=True&loc=Local")
+	db, err := gorm.Open("mysql", "root:123456@(127.0.0.1:3306)/douyin?charset=utf8mb4&parseTime=True&loc=Local")
 	if err != nil {
 		panic(err)
 	}
@@ -55,7 +55,7 @@ func main() {
 	//user.Age = 99
 	//db.Debug().Save(&user)  // 默认会修改所有字段
 	//
-	////db.Debug().Model(&user).Update("name", "小王子")
+	////db.Debug().Model(&user).Update("name", "公众号：程序员千羽")
 	////
 	////m1 := map[string]interface{}{
 	////	"name": "nateshao",

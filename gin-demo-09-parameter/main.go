@@ -12,7 +12,7 @@ func main() {
 
 	// GET请求 URL ?后面的是querystring参数
 	// key=value格式，多个key-value用 & 连接
-	// eq:  /web/query=小王子&age=18
+	// eq:  /web/query=公众号：程序员千羽&age=18
 	r.GET("/web", func(c *gin.Context) {
 		// 获取浏览器那边发请求携带的 query string 参数
 		name := c.Query("query") // 通过Query获取请求中携带的querystring参数

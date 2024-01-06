@@ -23,12 +23,12 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 	}
 	// 渲染模板
 	u1 := User{ // u1.Name
-		Name:   "小王子",
+		Name:   "公众号：程序员千羽",
 		Gender: "男",
 		Age:    18,
 	}
 	m1 := map[string]interface{}{
-		"name":   "小王子",
+		"name":   "公众号：程序员千羽",
 		"gender": "男",
 		"age":    18,
 	}

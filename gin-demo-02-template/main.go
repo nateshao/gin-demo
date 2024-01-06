@@ -16,7 +16,7 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	// 3. 渲染模板
-	name := "小王子"
+	name := "公众号：程序员千羽"
 	err = t.Execute(w, name)
 	if err != nil {
 		fmt.Println("render template failed,err:%v", err)
@@ -47,6 +47,5 @@ func main() {
 		fmt.Println("HTTP server start failed, err:%v", err)
 		return
 	}
-
 
 }

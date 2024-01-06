@@ -17,7 +17,7 @@ func index(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	// 渲染模板
-	name := "小王子"
+	name := "公众号：程序员千羽"
 	err = t.Execute(w, name)
 	if err != nil {
 		fmt.Printf("execute template failed, err:%v\n", err)

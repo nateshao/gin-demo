@@ -12,7 +12,7 @@ import (
 // 1. 定义模型
 type User struct {
 	ID   int64
-	Name sql.NullString `gorm:"default:'小王子'"`
+	Name sql.NullString `gorm:"default:'公众号：程序员千羽'"`
 	Age  int64
 }
 
