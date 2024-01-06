@@ -9,7 +9,7 @@ import (
 func index(w http.ResponseWriter, r *http.Request) {
 	// 定义模板
 	// 解析模板
-	t, err := template.ParseFiles("./index.tmpl")
+	t, err := template.ParseFiles("./gin-demo-05-template-tmpl/index.tmpl")
 	if err != nil {
 		fmt.Printf("parse template failed,err:%v\n", err)
 		return
@@ -26,7 +26,7 @@ type User struct {
 }
 
 func hello(w http.ResponseWriter, r *http.Request) {
-	t, err := template.ParseFiles("./hello.tmpl")
+	t, err := template.ParseFiles("./gin-demo-05-template-tmpl/hello.tmpl")
 	if err != nil {
 		fmt.Printf("parse template failed,err:%v\n", err)
 		return
@@ -55,7 +55,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 func home(w http.ResponseWriter, r *http.Request) {
 	// 定义模板
 	// 解析模板
-	t, err := template.ParseFiles("./home.tmpl")
+	t, err := template.ParseFiles("./gin-demo-05-template-tmpl/home.tmpl")
 	if err != nil {
 		fmt.Printf("parse template failed,err:%v\n", err)
 		return
@@ -69,7 +69,7 @@ func home(w http.ResponseWriter, r *http.Request) {
 func index2(w http.ResponseWriter, r *http.Request) {
 	// 定义模板（模板继承的方式）
 	// 解析模板
-	t, err := template.ParseFiles("./templates/base.tmpl", "./templates/index2.tmpl")
+	t, err := template.ParseFiles("./gin-demo-05-template-tmpl/templates/base.tmpl", "./gin-demo-05-template-tmpl/templates/index2.tmpl")
 	if err != nil {
 		fmt.Printf("parse template failed, err:%v\n", err)
 		return
@@ -81,7 +81,7 @@ func index2(w http.ResponseWriter, r *http.Request) {
 func home2(w http.ResponseWriter, r *http.Request) {
 	// 定义模板（模板继承的方式）
 	// 解析模板
-	t, err := template.ParseFiles("./templates/base.tmpl", "./templates/home2.tmpl")
+	t, err := template.ParseFiles("./gin-demo-05-template-tmpl/templates/base.tmpl", "./gin-demo-05-template-tmpl/templates/home2.tmpl")
 	if err != nil {
 		fmt.Printf("parse template failed, err:%v\n", err)
 		return
@@ -99,7 +99,7 @@ func main() {
 	http.HandleFunc("/hello", hello)
 	err := http.ListenAndServe(":9000", nil)
 	if err != nil {
-		fmt.Println("HTTP server start failed, err:%v", err)
+		fmt.Printf("HTTP server start failed, err:%v\n", err)
 		return
 	}
 }
