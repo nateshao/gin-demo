@@ -149,7 +149,7 @@ func InitDB() *gorm.DB {
 	port := "3306"
 	database := "douyin"
 	username := "root"
-	password := "12345"
+	password := "123456"
 	charset := "utf8"
 	args := fmt.Sprintf("%s:%s@(%s:%s)/%s?charset=%s&parseTime=true",
 		username,

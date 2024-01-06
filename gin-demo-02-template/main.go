@@ -25,11 +25,28 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 
 }
 
+func sayNateshao(w http.ResponseWriter, r *http.Request) {
+	t, err := template.ParseFiles("./nateshao.tmpl")
+	if err != nil {
+		fmt.Println("解析文件失败:%v", err)
+		return
+	}
+	name := "公众号千羽"
+	err = t.Execute(w, name)
+	if err != nil {
+		fmt.Println("render template failed,err:%v", err)
+		return
+	}
+}
+
 func main() {
 	http.HandleFunc("/", sayHello)
-	err := http.ListenAndServe(":9000", nil)
+	http.HandleFunc("/nateshao", sayNateshao)
+	err := http.ListenAndServe(":8080", nil)
 	if err != nil {
 		fmt.Println("HTTP server start failed, err:%v", err)
 		return
 	}
+
+
 }

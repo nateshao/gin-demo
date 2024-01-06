@@ -24,7 +24,7 @@ func f1(w http.ResponseWriter, r *http.Request) {
 		fmt.Printf("parse template failed, err:%v\n", err)
 		return
 	}
-	name := "小王子"
+	name := "程序员千羽"
 	// 渲染模板
 	t.Execute(w, name)
 
@@ -38,13 +38,13 @@ func demo1(w http.ResponseWriter, r *http.Request) {
 		fmt.Printf("parse template failed, err:%v\n", err)
 		return
 	}
-	name := "小王子"
+	name := "程序员千羽"
 	// 渲染模板
 	t.Execute(w, name)
 }
 func main() {
 	http.HandleFunc("/", f1)
-	http.HandleFunc("/tmplDemo", demo1)
+	http.HandleFunc("/demo1", demo1)
 	err := http.ListenAndServe(":9000", nil)
 	if err != nil {
 		fmt.Println("HTTP server start failed, err:%v", err)

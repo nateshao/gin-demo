@@ -36,10 +36,11 @@ func main() {
 		})
 	})
 
+
+	r.Run(":9090") // 启动server
+
 	// 返回从网上下载的模板
 	r.GET("/home", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "home.html", nil)
 	})
-
-	r.Run(":9090") // 启动server
 }

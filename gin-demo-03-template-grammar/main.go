@@ -15,6 +15,7 @@ type User struct {
 func sayHello(w http.ResponseWriter, r *http.Request) {
 	// 定义模板
 	// 解析模板
+	fmt.Println("hello")
 	t, err := template.ParseFiles("./hello.tmpl")
 	if err != nil {
 		fmt.Println("parse template failed,err:%v", err)
@@ -50,4 +51,5 @@ func main() {
 		fmt.Println("HTTP server start failed, err:%v", err)
 		return
 	}
+	fmt.Println("树是我的，你也是我的")
 }

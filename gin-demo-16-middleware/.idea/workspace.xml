@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1adff879-543f-47c1-a1c0-f4ff26f9ab2d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../gin-demo-01-hello/.idea/gin-demo-01-hello.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gin-demo-01-hello/gin_demo/.idea/gin_demo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gin-demo-02-template/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gin-demo-02-template/.idea/gin-demo-02-template.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gin-demo-02-template/nateshao.tmpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gin-demo-03-template-grammar/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gin-demo-03-template-grammar/.idea/gin-demo-03-template-grammar.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gin-demo-03-template-grammar/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gin-demo-03-template-grammar/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gin-demo-03-template-grammar/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gin-demo-01-hello/gin_demo/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../gin-demo-01-hello/gin_demo/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gin-demo-01-hello/gin_demo/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../gin-demo-01-hello/gin_demo/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gin-demo-02-template/hello.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/../gin-demo-02-template/hello.tmpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gin-demo-02-template/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../gin-demo-02-template/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gin-demo-03-template-grammar/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../gin-demo-03-template-grammar/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gin-demo-04-template-nesting/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../gin-demo-04-template-nesting/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gin-demo-05-template-tmpl/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gin-demo-05-template-tmpl/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gin-demo-05-template-tmpl/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../gin-demo-05-template-tmpl/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gin-demo-07-template-Rendering/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../gin-demo-07-template-Rendering/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gin-demo-08-json/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../gin-demo-08-json/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gin-demo-08-json/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../gin-demo-08-json/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gin-demo-15-router/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../gin-demo-15-router/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../go.sum" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" path="D:\software\golang\go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="2aZPlKAgVqcE56UTihjKPt0ChsS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gin-demo-17-gorm-mysql" />
+  </component>
+  <component name="RunManager">
+    <configuration name="go build lesson18" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="gin-demo-16-middleware" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="lesson18" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build lesson18" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1704523366973">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1704523366973" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1704523369342">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1704523369342" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1704523369342">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1704523369342" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1704523369341">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1704523369341" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1704523369342">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1704523369342" />
+  </component>
+</project>

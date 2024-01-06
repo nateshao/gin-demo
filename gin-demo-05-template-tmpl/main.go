@@ -14,7 +14,7 @@ func index(w http.ResponseWriter, r *http.Request) {
 		fmt.Printf("parse template failed,err:%v\n", err)
 		return
 	}
-	msg := "邵桐杰"
+	msg := "程序员千羽"
 	// 渲染模板
 	t.Execute(w, msg)
 }
@@ -38,12 +38,12 @@ func hello(w http.ResponseWriter, r *http.Request) {
 	}
 
 	m1 := map[string]interface{}{
-		"name":   "邵桐杰",
+		"name":   "程序员千羽11",
 		"gender": "男",
 		"age":    18,
 	}
 
-	//msg := "邵桐杰"
+	//msg := "程序员千羽11"
 	// 渲染模板
 	//t.Execute(w, msg)
 	t.Execute(w, map[string]interface{}{
@@ -61,7 +61,7 @@ func home(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	msg := "邵桐杰"
+	msg := "程序员千羽11"
 	// 渲染模板
 	t.Execute(w, msg)
 }
@@ -75,7 +75,7 @@ func index2(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	// 渲染模板
-	name := "邵桐杰"
+	name := "程序员千羽11"
 	t.ExecuteTemplate(w, "index2.tmpl", name)
 }
 func home2(w http.ResponseWriter, r *http.Request) {
