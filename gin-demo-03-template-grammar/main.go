@@ -15,20 +15,19 @@ type User struct {
 func sayHello(w http.ResponseWriter, r *http.Request) {
 	// 定义模板
 	// 解析模板
-	fmt.Println("hello")
-	t, err := template.ParseFiles("./hello.tmpl")
+	t, err := template.ParseFiles("./gin-demo-03-template-grammar/hello.tmpl")
 	if err != nil {
 		fmt.Println("parse template failed,err:%v", err)
 		return
 	}
 	// 渲染模板
 	u1 := User{ // u1.Name
-		Name:   "公众号：程序员千羽",
+		Name:   "程序员千羽",
 		Gender: "男",
 		Age:    18,
 	}
 	m1 := map[string]interface{}{
-		"name":   "公众号：程序员千羽",
+		"name":   "程序员千羽",
 		"gender": "男",
 		"age":    18,
 	}
@@ -45,11 +44,10 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/", sayHello)
+	http.HandleFunc("/sayHello", sayHello)
 	err := http.ListenAndServe(":9000", nil)
 	if err != nil {
 		fmt.Println("HTTP server start failed, err:%v", err)
 		return
 	}
-	fmt.Println("树是我的，你也是我的")
 }
